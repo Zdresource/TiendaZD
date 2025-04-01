@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos - ZD Resource</title>
+    <link rel="stylesheet" href="estilos.css"> 
+    <style>
+        /* Estilos para los botones de las categorías y el botón de volver */
+        .categoria-btn, .volver-btn {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 25px;
+            cursor: pointer;
+            margin: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .categoria-btn:hover, .volver-btn:hover {
+            background-color: #218838;
+        }
+    </style>
+    <script>
+        function mostrarSeccion(seccion) {
+            document.getElementById("categorias").style.display = "none";
+            document.getElementById(seccion).style.display = "block";
+        }
+
+        function volverInicio() {
+            document.getElementById("categorias").style.display = "block";
+            let secciones = document.querySelectorAll(".productos-section");
+            secciones.forEach(seccion => {
+                seccion.style.display = "none";
+            });
+        }
+    </script>
+</head>
+<body>
+
+    <header>
+        <h1>Productos de ZD Resource</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="categorias">
+        <h2>Selecciona una categoría:</h2>
+        <button class="categoria-btn" onclick="mostrarSeccion('scripts')">Scripts</button>
+        <button class="categoria-btn" onclick="mostrarSeccion('mapeos')">Mapeos</button>
+        <button class="categoria-btn" onclick="mostrarSeccion('bots')">Bot de Discord</button>
+        <button class="categoria-btn" onclick="mostrarSeccion('hosting')">Hosting</button>
+    </section>
+
+    <section id="scripts" class="productos-section" style="display: none;">
+        <h2>Scripts</h2>
+        <div class="productos-container">
+            <div class="producto">
+                <img src="script1.jpg" alt="Script 1">
+                <p>Descripción del Script 1</p>
+            </div>
+            <div class="producto">
+                <img src="script2.jpg" alt="Script 2">
+                <p>Descripción del Script 2</p>
+            </div>
+        </div>
+        <button class="volver-btn" onclick="volverInicio()">Volver</button>
+    </section>
+
+    <section id="mapeos" class="productos-section" style="display: none;">
+        <h2>Mapeos</h2>
+        <div class="productos-container">
+            <div class="producto">
+                <img src="mapeo1.jpg" alt="Mapeo 1">
+                <p>Descripción del Mapeo 1</p>
+            </div>
+        </div>
+        <button class="volver-btn" onclick="volverInicio()">Volver</button>
+    </section>
+
+    <section id="bots" class="productos-section" style="display: none;">
+        <h2>Bot de Discord</h2>
+        <div class="productos-container">
+            <div class="producto">
+                <img src="bot1.jpg" alt="Bot 1">
+                <p>Descripción del Bot 1</p>
+            </div>
+        </div>
+        <button class="volver-btn" onclick="volverInicio()">Volver</button>
+    </section>
+
+    <section id="hosting" class="productos-section" style="display: none;">
+        <h2>Hosting para tu servidor de MTA</h2>
+        <p>Ofrecemos hosting confiable y de calidad para tu servidor de MTA. Nuestros planes .</p>
+        <ul>
+            <li>Panel de control optimizado</li>
+            <li>Soporte técnico 24/7</li>
+            <li>Precios accesibles desde $4 USD al mes</li>
+            <li>Alta seguridad y estabilidad</li>
+        </ul>
+        <button class="volver-btn" onclick="volverInicio()">Volver</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 ZD Resource</p>
+    </footer>
+
+</body>
+</html>

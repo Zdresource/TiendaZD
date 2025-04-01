@@ -1,0 +1,152 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background-color: #222;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Logo con animación flotante */
+@keyframes flotar {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0); }
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+    animation: flotar 3s ease-in-out infinite;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #ffffff;
+}
+
+/* Menú de navegación */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #dddddd;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* Secciones */
+section {
+    width: 80%;
+    max-width: 1000px;
+    margin: 40px auto;
+    background-color: #1e1e1e;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2rem;
+    color: #cecece;
+}
+
+section p {
+    font-size: 1.2rem;
+}
+
+/* Botón con imagen de Developer */
+.boton-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Espacio entre la imagen y el botón */
+}
+
+.icono-developer {
+    width: 40px; /* Tamaño de la imagen */
+    height: auto;
+}
+
+/* Botón redondo */
+.btn-redondo {
+    background-color: #29f057;
+    color: #141414;
+    font-size: 1.2rem;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 50px; /* Hace que el botón sea redondo */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.btn-redondo:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #000;
+    font-size: 1rem;
+}
+
+/* Developer en la esquina inferior */
+.Developer {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    font-size: 1rem;
+    color: #bbb;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Estilos para el botón de YouTube */
+.youtube-btn {
+    position: fixed;
+    bottom: 10px;
+    left: 10px; /* Cambiado de right a left */
+    background-color: #FF0000;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.youtube-btn:hover {
+    background-color: #CC0000;
+}
+
+
